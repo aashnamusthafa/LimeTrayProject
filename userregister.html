@@ -1,0 +1,37 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" type="text/css" href="styles.css">
+  <script type="text/javascript" src="../deloitte2-master/validationcheck1.js"></script>
+</head>
+<body>
+<!--<div class="row">-->
+<div class="row-sm-12 row-lg-12" style="height:8%">
+<nav>
+  <ul>
+   <li style="float:left;"> <img src="express.jpg" width="50px" height="50px" alt="pic of logo"></li>
+   <li style="float:left;"><a href="test.html">Lime Tray</a></li>
+   <li><a href="../deloitte2-master/signin.html">SIGN IN</a></li> 
+  </ul>
+ </nav>
+</div>
+<div class="row-sm-12 row-lg-12" style="height:100%">
+ <div id="reservation">
+  <br><br><h1 style="margin-block-start:0.0em;margin-block-end: 0.0em;text-align:center;padding:10px;padding-bottom:10px;">REGISTRATION</h1>
+  <h4 style="padding:0px;text-align:center;margin-block-start:0.0em;margin-block-end: 0.0em;text-align:center;">Waiting To Serve You</h4>
+  <form id="f" name="form_2">
+   <div id="con" align="center" style="margin-top: 10px;">
+   <input type="text" name="name_1" id="f-con" placeholder="Enter Your Name" oninput="namecheck1(document.form_2.name_1)" /><br>
+   <input type="text" name="userid_1" id="f-con" placeholder="Enter Your User ID" oninput="useridcheck1(document.form_2.userid_1)" /><br>
+   <input type="password" name="pwd_1" id="f-con" placeholder="Enter Your Password" onfocusout="pwdcheck1(document.form_2.pwd_1)" /><br>
+   <input type="password" name="email_2" id="f-con" placeholder="Confirm Your Password" onfocusout="vname2(document.form_2.email_2)" /><br>
+   <input type="email" name="email_1" id="f-con" placeholder="Enter Your Email" onfocusout="emailcheck(document.form_2.email_1)" /><br>
+   <input type="text" name="phonenumber_1" id="f-con" placeholder="Enter Your Phone Number" oninput="phnumbercheck1(document.form_2.phonenumber_1)" /><br>
+    <input type="submit" name="submit" class="f-sub" value="Register" onsubmit="return submitForm2()"/>
+    <footer><h6>&#169; copyrights</h6></footer>
+   </div>
+  </form>
+ </div>
+</div>
+</body>
+</html>

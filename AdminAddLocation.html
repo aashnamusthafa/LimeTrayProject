@@ -1,0 +1,189 @@
+<html>
+<head>
+<title> LOCATION DETAILS </title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+div{border:solid; background-color:white; color:black;}
+.d-sub{width:200px;background:wheat;border-radius: 12px;color:black;font-size:12px;border:5px solid #fff;outline:none;font-weight:bolder;letter-spacing:2px;}
+body{background:linear-gradient(to bottom, rgba(0, 0, 0,0.9), rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.7), rgba(0,0,0,1)), url(back2.jpg)no-repeat; width:100%;background-size:cover;color:white;font-family:sans-serif;}
+</style>
+</head>
+<body>
+<form>
+<h1> <center><b> ENTER LOCATION DETAILS </b> </center> </h1>
+<table align="center">
+<tr>
+<td> <input type="text" class="d-sub" name="text6" placeholder="ENTER LOCATION ID" id="txt6"  required />  </td> ;
+</tr>
+<tr>
+<td> <input type="text" class="d-sub" name="text6" placeholder="ENTER TRAIN NUMBER" id="txt6"  required />  </td> &nbsp;
+ </tr> 
+
+<tr>
+<td><b>From:<select>
+						<option value="" >Select...</option>
+						<option value="bglr" class="fromlocation">BANGLORE</option>
+						<option value="cmbtre" class="fromlocation">COIMBATORE</option>
+						<option value="kochi" class="fromlocation">KOCHI</option>
+						</select>
+						<span id="err1"></span></b>
+<b>TIME :</b><input type="time" class="d-sub" required /> </td>
+</tr>
+<tr>
+<center><b>To:<select>
+						<option value="" >Select...</option>
+						<option value="bglr" class="tolocation">BANGLORE</option>
+						<option value="cmbtre" class="tolocation">COIMBATORE</option>
+						<option value="kochi" class="tolocation">KOCHI</option>
+						</select>
+						<span id="err"></span> </b> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
+<b>TIME :</b><input type="time" class="d-sub" required/></center> </td>
+</tr>
+<tr>
+<td><input type="text" class="d-sub" name="text3" placeholder="ENTER STOP 1" id="txt3" oninput="funvalidation2()" required/> &nbsp; 
+&nbsp; &nbsp; <span id="errormessage2" style="color:red; font-weight:bold;"> </span>
+<b>TIME :</b><input type="time" class="d-sub" required /> </td>
+</tr>
+<tr>
+<td> <input type="text" class="d-sub" name="text4" placeholder="ENTER STOP 2" id="txt4" oninput="funvalidation3()" required /> &nbsp; 
+&nbsp; &nbsp; <span id="errormessage3" style="color:red; font-weight:bold;"> </span>
+<b>TIME :</b><input type="time" class="d-sub" required/> </td>
+</tr>
+<tr>
+<td><input type="text" class="d-sub" name="text5" placeholder="ENTER STOP 3" id="txt5" oninput="funvalidation4()" required /> &nbsp; 
+&nbsp; &nbsp; <span id="errormessage4" style="color:red; font-weight:bold;"> </span>
+<b>TIME :</b><input type="time" class="d-sub" required>  </td>
+</tr>
+<tr> 
+<td> <center> <input type="submit" class="d-sub" value="ADD LOCATION" style="font-size:20; color : black;" onsubmit="finalvalidation()" /> </center> </td>
+</tr>
+</table>
+<script>
+function dropdownValidation()
+{
+var elements=document.getElementsByClassName("tolocation");
+var count=0;
+for(i=0;i<elements.length;i++)
+{
+if(elements[i].selected)
+{
+count++;
+}}
+if(count==0)
+{
+document.getElementById("err").innerHTML="(Please Select an option!!)";
+return false;
+}
+else
+{
+document.getElementById("err").innerHTML="";
+return true;
+}}
+
+
+
+function dropdownValidation1()
+{
+var elements=document.getElementsByClassName("fromlocation");
+var count=0;
+for(i=0;i<elements.length;i++)
+{
+if(elements[i].selected)
+{
+count++;
+}}
+if(count==0)
+{
+document.getElementById("err1").innerHTML="(Please Select an option!!)";
+return false;
+}
+else
+{
+document.getElementById("err1").innerHTML="";
+return true;
+}}
+function funvalidation()
+{
+	var userval=document.getElementById("txt1").value;
+	var namePattern="^[A-Za-z]+$";
+	if(!userval.match(namePattern))
+	{
+		document.getElementById("errormessage").innerHTML="(Invalid input)";
+	}
+    else
+    {
+		document.getElementById("errormessage").innerHTML="";
+	}
+}	
+function funvalidation1()
+{
+	var userval=document.getElementById("txt2").value;
+	var namePattern="^[A-Za-z]+$";
+	if(!userval.match(namePattern))
+	{
+		document.getElementById("errormessage1").innerHTML="(Invalid input)";
+	}
+    else
+    {
+		document.getElementById("errormessage1").innerHTML="";
+	}
+}
+function funvalidation2()
+{
+	var userval=document.getElementById("txt3").value;
+	var namePattern="^[A-Za-z]+$";
+	if(!userval.match(namePattern))
+	{
+		document.getElementById("errormessage2").innerHTML="(Invalid input)";
+	}
+    else
+    {
+		document.getElementById("errormessage2").innerHTML="";
+	}
+}	
+function funvalidation3()
+{
+	var userval=document.getElementById("txt4").value;
+	var namePattern="^[A-Za-z]+$";
+	if(!userval.match(namePattern))
+	{
+		document.getElementById("errormessage3").innerHTML="(Invalid input)";
+	}
+    else
+    {
+		document.getElementById("errormessage3").innerHTML="";
+	}
+}	
+function funvalidation4()
+{
+	var userval=document.getElementById("txt5").value;
+	var namePattern="^[A-Za-z]+$";
+	if(!userval.match(namePattern))
+	{
+		document.getElementById("errormessage4").innerHTML="(Invalid input)";
+	}
+    else
+    {
+		document.getElementById("errormessage4").innerHTML="";
+	}
+}	
+function finalvalidation()
+{
+var a=dropdownValidation();
+var b=dropdownValidation1();
+	var x=funvalidation();
+	var y=funvalidation1();
+	var z=funvalidation2();
+	var h=funvalidation3();
+	var r=funvalidation4();
+	if(x && y && z && h && r && a&& b)
+	return true;
+	else
+	return false;
+	
+}		
+	
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+<title> Checkout Page</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<style>
+body{
+  background-color:black;
+  border:solid;
+  border-color:brown; 
+  height:700px;background:linear-gradient(to bottom, rgba(0, 0, 0,0.9), rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.7), rgba(0,0,0,1)),
+ url(back2.jpg)no-repeat;
+ width:100%;
+ font-family:sans-serif;
+ background-size:cover;
+ background-position: 0% 0%;
+ background-size: 100% 100%;
+ color:white;
+}
+
+table, th, td {
+  border: 3px solid brown;
+  cellpadding:15;
+}
+</style> 
+</head>
+<body>
+<center>
+<div class="row" >
+<div class="col-md-12" height=40%>
+<table>
+<tr><th>Items</th><th>Quantity</th><th>Price(&#x20b9;)</th></tr>
+<tr><td>Sandwich</td><td>1</td><td class="add">65</td></tr>
+<tr><td>Pizza</td><td>2</td><td class="add">190</td></tr>
+<tr><td>Salad</td><td>6</td><td class="add">600</td></tr>
+<tr><td>Pasta</td><td>1</td><td class="add">150</td></tr>
+<tr><th>Total :</th><td colspan = 2 align=right>1005</td></tr>
+</table><br/><br/><br/>
+<form>
+Instructions:<br/><br/>
+<textarea  rows=5 cols=25 name="Address" placeholder="Please enter the Instructions. :)" id="instructions" ></textarea><br/><br/>
+<h3 style="font-family;verdana;">Mode of Payment : CASH</h3><br/><br/>
+<input type="Submit" name="Submit" value="Place Order">
+<input type="Reset" value="Cancel Order">
+</div>
+</div>
+</center>
+</form>
+</body>
+</html>

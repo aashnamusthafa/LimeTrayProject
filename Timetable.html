@@ -1,0 +1,175 @@
+<html>
+<head>
+<title>LOCATION DETAILS</title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+.middle{
+margin-top:50%;
+margin-left:40%;
+margin-right:20%;
+
+}
+
+.imgAlign{
+margin-top:50px;
+margin-left:200px;
+margin-right:200px;
+}
+body{background:linear-gradient(to bottom, rgba(0, 0, 0,0.9), rgba(0, 0, 0,0.6), rgba(0, 0, 0,0.7), rgba(0,0,0,1)), url(back2.jpg)no-repeat; width:100%;background-size:cover;color:white;font-family:sans-serif;}
+}
+.imgAlign1{align:center;}
+
+
+</style>
+
+</head>
+
+<body>
+<div align="center">
+<h1><b>LimeTray</b></h1>
+<h4><b>Food Delivery App</b></h4>
+<form name="location" onsubmit="return submitform()">
+<div class="row">
+<div class="col-xs-12">
+<div class="imgAlign1">
+<h2 style="font-family:seriff; font-size:25"><b>Delivery Location</b></h2><br/>
+
+
+<b>To:<select>
+						<option value="" >Select...</option>
+						<option value="bglr" class="tolocation">BANGLORE</option>
+						<option value="cmbtre" class="tolocation">COIMBATORE</option>
+						<option value="kochi" class="tolocation">KOCHI</option>
+						</select>
+						<span id="err"></span> </b> &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+
+<b>From:<select>
+						<option value="" >Select...</option>
+						<option value="bglr" class="fromlocation">BANGLORE</option>
+						<option value="cmbtre" class="fromlocation">COIMBATORE</option>
+						<option value="kochi" class="fromlocation">KOCHI</option>
+						</select>
+						<span id="err1"></span></b></br>
+
+
+
+<!--<b>TO:<input type="text" name="tolocation" id="tolocation" placeholder="TO" pattern="^[a-zA-Z, ]+$" oninput="tonameValidate()"/> </b>
+<span id="span1" style="color:red"> </span>&nbsp;&nbsp;&nbsp;&nbsp;
+<b>FROM:<input type="text" name="fromlocation" id="fromlocation" placeholder="FROM" pattern="^[a-zA-Z, ]+$" oninput="fromnameValidate()"/></b>
+<span id="span2" style="color:red"> </span>
+<br/><br/>-->
+<input type="submit" value="SEARCH" name="btn" onclick="return submitform()"/>
+</div>
+</div>
+</div>
+
+<div align="center" class="imgAlign">
+<table border="1" cellpadding="10"  style="border-color:#e1f6f8">
+<tr>
+<th colspan="3">TRAIN NO:</th>
+</tr>
+<tr>
+<th>From:<h3>Banglore City</h3></th>
+<th></th>
+<th>To:<h3>Ernakulam South</h3></th>
+
+</tr>
+<tr>
+<th>TIMING</th>
+<th>STOPS</th>
+<th>RESTAURANT</th>
+</tr>
+<tr>
+<td>06.22</td>
+<td>Banglore City</td>
+<td>Salt Indian Restaurant</td>
+</tr>
+<tr>
+<td>08.40</td>
+<td>Dharmapuri (DPJ)</td>
+<td>Dazzle Dinette Drive-in Restaurant</td>
+</tr>
+<tr>
+<td>13.05</td>
+<td>Coimbatore Junction (CBE)</td>
+<td>Jalpaan Coimbatore</td>
+</tr>
+
+<tr>
+<td>15.22</td>
+<td>Thrisur (TCR)</td>
+<td>Navaratna</td>
+</tr>
+
+<td>16.55</td>
+<td>Ernakulam South</td>
+<td>Kayees Hotel</td>
+</tr>
+
+</table>
+</div>
+</center>
+</form>
+<script>
+
+function dropdownValidation()
+{
+var elements=document.getElementsByClassName("tolocation");
+var count=0;
+for(i=0;i<elements.length;i++)
+{
+if(elements[i].selected)
+{
+count++;
+}}
+if(count==0)
+{
+document.getElementById("err").innerHTML="(Please Select an option!!)";
+return false;
+}
+else
+{
+document.getElementById("err").innerHTML="";
+return true;
+}}
+
+
+
+function dropdownValidation1()
+{
+var elements=document.getElementsByClassName("fromlocation");
+var count=0;
+for(i=0;i<elements.length;i++)
+{
+if(elements[i].selected)
+{
+count++;
+}}
+if(count==0)
+{
+document.getElementById("err1").innerHTML="(Please Select an option!!)";
+return false;
+}
+else
+{
+document.getElementById("err1").innerHTML="";
+return true;
+}}
+
+
+
+function submitform(){
+var x=dropdownValidation();
+var y=dropdownValidation1();
+if(x&&y)
+return true;
+else
+return false;
+}
+
+
+</script>
+</body>
+</html>
+
